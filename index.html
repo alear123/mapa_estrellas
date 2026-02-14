@@ -3,29 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuestra Noche ✨</title>
+  <title>Nuestra Noche ❤️</title>
 
   <style>
     body {
       margin: 0;
-      background: #0b0f1a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      font-family: "Georgia", serif;
+      background: radial-gradient(circle at top, #121a33, #05060d);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+      background-size: 80px 80px, 120px 120px;
+      background-position: 0 0, 40px 60px;
+      opacity: 0.15;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
       padding: 20px;
     }
 
+    h1 {
+      font-size: 2.7rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .date {
+      font-size: 1rem;
+      opacity: 0.7;
+      margin-bottom: 35px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 25px;
+      padding: 25px;
+      box-shadow: 0px 0px 40px rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+      margin-bottom: 30px;
+    }
+
+    .letter {
+      text-align: left;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      opacity: 0.95;
+      white-space: pre-line;
+    }
+
+    .letter strong {
+      color: #ffb6c1;
+    }
+
     img {
-      max-width: 100%;
-      max-height: 95vh;
-      border-radius: 3px;
-      box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.01);
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    .firma {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: #ffb6c1;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
   </style>
 </head>
 
 <body>
-  <img src="mapa.jpg" alt="Mapa de estrellas" />
+  <div class="container">
+
+    <h1>✨ Nuestra Noche ✨</h1>
+    <div class="date"> 13/02/2023 </div>
+
+    <div class="card">
+      <img src="mapa.jpg" alt="Mapa de estrellas" />
+    </div>
+
+    <div class="footer">
+      Este fue el cielo exacto el día que empezó lo nuestro.
+      <div class="firma">❤️ Para vos</div>
+    </div>
+
+  </div>
 </body>
 </html>
